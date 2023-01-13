@@ -1,9 +1,9 @@
 name: Build and Test
 on:
-  push:
+  pull_request:
     branches:
       - main
-  pull_request:
+  merge_group:
     branches:
       - main
 jobs:
