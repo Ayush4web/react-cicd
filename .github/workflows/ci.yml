@@ -16,4 +16,7 @@ jobs:
       #  - name: docker login
       #    run: docker login
       - name: Build
-        run: docker 
+        run: docker build -t ayush4web/react-cicd -f Dockerfile.dev .
+
+      - name: Test React
+        run : docker run ayush4web/react-cicd npm run test  
