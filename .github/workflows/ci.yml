@@ -19,4 +19,4 @@ jobs:
         run: docker build -t ayush4web/react-cicd -f Dockerfile.dev .
 
       - name: Test React
-        run : docker run ayush4web/react-cicd npm run test  
+        run : docker run -e CI=true ayush4web/react-cicd npm run test  
